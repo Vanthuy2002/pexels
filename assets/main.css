@@ -1,0 +1,208 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.25s ease;
+}
+*::selection {
+  background-color: #2cccff;
+  color: black;
+}
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+.search {
+  height: 300px;
+  background: url(./images/search-img.jpg) no-repeat center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.search__title {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+.search__title,
+.search__desc {
+  color: white;
+}
+.search__desc {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.search__input {
+  padding: 13px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  outline: none;
+  width: 350px;
+}
+.btn {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #2e7bdf;
+  padding: 13px 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.galery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.galery .galery__images {
+  gap: 20px;
+  columns: 5 340px;
+  list-style: none;
+  padding-left: 0;
+}
+.card__image {
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.galery__images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.load {
+  border: none;
+  border-radius: 5px;
+  background-color: #2c76ff;
+  padding: 12px 24px;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+.load.disable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.load:hover {
+  opacity: 0.7;
+}
+.details {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: absolute;
+  color: white;
+  width: 100%;
+  bottom: -100px;
+  padding: 15px 20px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  transition: all 0.2s linear;
+}
+
+.card__image:hover .details {
+  bottom: 6px;
+}
+.details img {
+  width: 18px;
+  height: 18px;
+}
+.info .btn__info,
+.details .download {
+  border: none;
+  outline: none;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modal.hide {
+  display: none;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+.modal-content {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+  background-color: #fff;
+}
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 100rem;
+  color: white;
+  background-color: #eee;
+  padding: 5px;
+  transform: translate(50%, -50%);
+}
+.modal-main {
+  text-align: center;
+  overflow: hidden;
+}
+.modal-main .previews {
+  width: 80%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: all linear 0.25s;
+}
+
+.info {
+  text-align: left;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.info img {
+  width: 20px;
+  height: 20px;
+}
+.info span {
+  font-size: 2rem;
+}
+.info .btn__info {
+  background-color: #3a86ff;
+  margin-left: auto;
+  padding: 5px 10px;
+}

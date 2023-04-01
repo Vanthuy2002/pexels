@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pexel Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/main.css" />
+  </head>
+  <body>
+    <section class="container">
+      <section class="search">
+        <h1 class="search__title">Image Galery With Javascript</h1>
+        <p class="search__desc">
+          Search and download everything width 3 secons
+        </p>
+        <div class="search__action">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search something..."
+          />
+          <button class="btn">Search</button>
+        </div>
+      </section>
+
+      <section class="galery">
+        <ul class="galery__images"></ul>
+        <button class="load">Load More</button>
+      </section>
+
+      <div class="modal hide">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+          <span class="modal-close" onclick="hideModal()">
+            <img src="./assets/images/close.svg" alt="" />
+          </span>
+          <div class="modal-main">
+            <div class="info">
+              <img src="./assets/images/usertwo.svg" alt="" />
+              <span>Thuy Nguyen</span>
+              <button class="btn__info">
+                <img src="./assets/images/download.svg" alt="" />
+              </button>
+            </div>
+            <img src="./assets/images/img-1.jpg" alt="" class="previews" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
